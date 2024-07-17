@@ -10,7 +10,7 @@ The model construction process uses the MindSpore framework. Installation guide 
 
 ## Finetune Task
 The overall architecture of the model is shown in the figure below：<br>
-![structure](https://www.example.com/image.jpg)
+![image](./images/structure.png)
 
 [The pre-trained model](https://zenodo.org/records/12747829) was published in our previous study, and it was trained using publicly available unlabeled pure sequence protein sequences from UniProt. <br>Therefore, the pre-trained model can be directly fine-tuned using the target dataset to construct the desired prediction model.  <br>Here, the fine-tuned framework for classification was used to construct different bioactive models. 
 **Pre-trained models currently available:**
