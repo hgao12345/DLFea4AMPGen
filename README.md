@@ -9,7 +9,20 @@ The model construction process uses the MindSpore framework. Installation guide 
 
 
 ## Finetune Task
-[The pre-trained model](https://zenodo.org/records/12747829) was published in our previous study, and it was trained using publicly available unlabeled pure sequence protein sequences from UniProt. <br>Therefore, the pre-trained model can be directly fine-tuned using the target dataset to construct the desired prediction model.  <br>Here, the fine-tuned framework for classification was used to construct different bioactive models. The overall architecture of the model is shown in the figure below：<br>
+The overall architecture of the model is shown in the figure below：<br>
+
+
+[The pre-trained model](https://zenodo.org/records/12747829) was published in our previous study, and it was trained using publicly available unlabeled pure sequence protein sequences from UniProt. <br>Therefore, the pre-trained model can be directly fine-tuned using the target dataset to construct the desired prediction model.  <br>Here, the fine-tuned framework for classification was used to construct different bioactive models. 
+**Pre-trained models currently available:**
+| model	| function |
+| :--: 	| :--: |
+| [ABP-MPB](https://zenodo.org/records/12747957/files/ABP_Best_Model.ckpt?download=1) | antibacterial activity identification |
+| [AFP-MPB](https://zenodo.org/records/12747957/files/AFP_Best_Model.ckpt?download=1) | antifungal activity identification |
+| [AOP-MPB](https://zenodo.org/records/12747957/files/AOP_Best_Model.ckpt?download=1) | antioxidant activity identification |
+
+
+
+
 
 
 MP-BERT is trained using publicly available unlabelled pure sequence protein sequences, by self-supervised learning in Figure a.<br>
@@ -25,12 +38,7 @@ In our study, we used 8 * Ascend 910 32GB computing NPUs, 768GB Memory on a Huaw
 The data processing and pre-training code is stored under Pretrain_code and the training data is taken from the UniRef dataset.<br>
 Current results for the pre-training task of sequence pairs using Pfamily to establish links between sequences, predicted using the [ProtENN](https://console.cloud.google.com/storage/browser/brain-genomics-public/research/proteins/pfam/random_split) .<br>
 
-**Pre-trained models currently available:**
-| model	| function |
-| :--: 	| :--: |
-| [ABP-MPB](https://zenodo.org/records/12747957/files/ABP_Best_Model.ckpt?download=1) | antibacterial activity identification |
-| [AFP-MPB](https://zenodo.org/records/12747957/files/AFP_Best_Model.ckpt?download=1) | antifungal activity identification |
-| [AOP-MPB](https://zenodo.org/records/12747957/files/AOP_Best_Model.ckpt?download=1) | antioxidant activity identification |
+
 
 **See the Pretrain_code section for more information on the use of pre-training**
 
