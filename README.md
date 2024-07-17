@@ -20,9 +20,9 @@ Therefore, we can directly fine-tune this pre-trained model to construct the des
 We have fine-tuned the framework for classification to create three bioactive models: ABP-MPB, AFP-MPB, and AOP-MPB. The details are as follows:
 | model	| function |
 | :--: 	| :--: |
-| [ABP-MPB](https://zenodo.org/records/12747957/files/ABP_Best_Model.ckpt?download=1) | antibacterial activity identification |
-| [AFP-MPB](https://zenodo.org/records/12747957/files/AFP_Best_Model.ckpt?download=1) | antifungal activity identification |
-| [AOP-MPB](https://zenodo.org/records/12747957/files/AOP_Best_Model.ckpt?download=1) | antioxidant activity identification |
+| [ABP-MPB](https://zenodo.org/records/12747957/files/ABP_Best_Model.ckpt?download=1) | Antibacterial activity identification |
+| [AFP-MPB](https://zenodo.org/records/12747957/files/AFP_Best_Model.ckpt?download=1) | Antifungal activity identification |
+| [AOP-MPB](https://zenodo.org/records/12747957/files/AOP_Best_Model.ckpt?download=1) | Antioxidant activity identification |
 
 
 ## Prediction Task
