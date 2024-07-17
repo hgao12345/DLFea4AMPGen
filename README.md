@@ -17,7 +17,6 @@ The overall architecture of the model is shown in the figure below：<br><br>
 [The pre-trained model](https://zenodo.org/records/12747829) was published in our previous study, and it was trained using publicly available unlabeled pure sequence protein sequences from UniProt. <br><br>
 Therefore, we can directly fine-tune this pre-trained model to construct the desired prediction model. 
 <br><br>
-**Available Fine-tuned models**<br>
 We have fine-tuned the framework for classification to create three bioactive models: ABP-MPB, AFP-MPB, and AOP-MPB. The details are as follows:
 | model	| function |
 | :--: 	| :--: |
