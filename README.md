@@ -12,7 +12,7 @@ The model construction process uses the MindSpore framework. Installation guide 
 The overall architecture of the model is shown in the figure below：<br>
 ![./images/structure.png](https://github.com/hgao12345/DLFea4AMPGen/blob/main/Images/structure.png)
 
-[The pre-trained model](https://zenodo.org/records/12747829) was published in our previous study, and it was trained using publicly available unlabeled pure sequence protein sequences from UniProt. <br>Therefore, the pre-trained model can be directly fine-tuned using the target dataset to construct the desired prediction model.  <br>Here, the fine-tuned framework for classification was used to construct different bioactive models. 
+[The pre-trained model](https://zenodo.org/records/12747829) was published in our previous study, and it was trained using publicly available unlabeled pure sequence protein sequences from UniProt. <br>Therefore, the pre-trained model can be directly fine-tuned using the target dataset to construct the desired prediction model.  <br>Here, the fine-tuned framework for classification was used to construct different bioactive models. <br>
 **Fine-tuned models currently available:**
 | model	| function |
 | :--: 	| :--: |
