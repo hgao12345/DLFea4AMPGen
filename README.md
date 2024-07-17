@@ -4,7 +4,7 @@ By fine-tuning the [pre-trained model MP-BERT](https://github.com/BRITian/MP-BER
 
 ## Installation
 ## Huawei Atlas Server (Linux, with Huawei Ascend 910 NPU)
-[![](https://img.shields.io/badge/Environment-Docker>=18.03-yellow.svg??style=flat-square)](https://www.docker.com/) 
+[![](https://img.shields.io/badge/Environment-Docker>=18.03-yellow.svg??style=flat-square)](https://www.docker.com/) <br>
 The model construction process uses the MindSpore framework. Installation guide for installing Ascend MindSpore on different hardware platforms can be found at:https://www.mindspore.cn/install/.<br>Note: 
 
 To run MP-BERT at Ascend using the MindSpore framework, it is recommended to use Docker, an open source application container engine that allows developers to package their applications, as well as dependency packages, into a lightweight, portable container.<br> By using Docker, rapid deployment of MindSpore can be achieved and isolated from the system environment.
