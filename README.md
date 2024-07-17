@@ -5,28 +5,9 @@ By fine-tuning the [pre-trained model MP-BERT](https://github.com/BRITian/MP-BER
 ## Installation
 ## Huawei Atlas Server (Linux, with Huawei Ascend 910 NPU)
 [![](https://img.shields.io/badge/Environment-Docker>=18.03-yellow.svg??style=flat-square)](https://www.docker.com/) <br>
-The model construction process uses the MindSpore framework. Installation guide for installing Ascend MindSpore on different hardware platforms can be found at:https://www.mindspore.cn/install/.<br>Note: 
+The model construction process uses the MindSpore framework. Installation guide for installing Ascend MindSpore on different hardware platforms can be found at: https://www.mindspore.cn/install/.<br>Here, we recommended to use Docker, an open source application container engine that allows developers to package their applications, as well as dependency packages, into a lightweight, portable container.<br> By using Docker, rapid deployment of MindSpore can be achieved and isolated from the system environment.
 
-To run MP-BERT at Ascend using the MindSpore framework, it is recommended to use Docker, an open source application container engine that allows developers to package their applications, as well as dependency packages, into a lightweight, portable container.<br> By using Docker, rapid deployment of MindSpore can be achieved and isolated from the system environment.
 
-Download Ascend traning base image for MindSpore framework from ascendhub: <br>
-https://ascendhub.huawei.com/public-ascendhub/mindspore-modelzoo#/detail/ascend-mindspore
-
-Note: Ascend and CANN firmware and drivers need to be installed in advance before installation.<br>
-Confirm installation of ARM-based Ubuntu 18.04/CentOS 7.6 64-bit operating system.
-
-### Nvidia GPU Server (Linux)
-Linux server with GPU
-Support for docker, conda and pip installation environments, see:<br>
-https://www.mindspore.cn/install
-
-### CPU Device (Linux and Windows)
-Pre-training of MP-BERT is not supported using the CPU and fine-tuning of training on large datasets is not recommended. predictions calculated by the CPU are recommended to be installed using conda or pip:<br>
-https://www.mindspore.cn/install
-
-### Online Service (Huawei ModelArts Platform, with Huawei Ascend 910 NPU)
-Huawei provides an online graphical training platform, ModelArts, for pre-training and fine-tuning of the MP-BERT, as detailed in:
-https://www.huaweicloud.com/product/modelarts.html?utm_source=3.baidu.com&utm_medium=organic&utm_adplace=kapian
 
 ## Structure of MP-BERT and Finetune Task
 MP-BERT is trained using publicly available unlabelled pure sequence protein sequences, by self-supervised learning in Figure a.<br>
