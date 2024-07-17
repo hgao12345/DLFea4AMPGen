@@ -23,7 +23,7 @@ Therefore, we can directly fine-tune this pre-trained model to construct the des
 | [ABP-MPB](https://zenodo.org/records/12747957/files/ABP_Best_Model.ckpt?download=1) | antibacterial activity identification |
 | [AFP-MPB](https://zenodo.org/records/12747957/files/AFP_Best_Model.ckpt?download=1) | antifungal activity identification |
 | [AOP-MPB](https://zenodo.org/records/12747957/files/AOP_Best_Model.ckpt?download=1) | antioxidant activity identification |
-<br>
+
 
 ## Prediction Task
 If you only want to identify AMPs using an existing model rather than constructing a new bioactive peptide prediction model from scratch, you can directly use our model for prediction. <br><br>
