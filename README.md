@@ -9,7 +9,7 @@ The model construction process uses the MindSpore framework. Installation guide 
 
 
 ## Finetune Task
-[The pre-trained model](https://zenodo.org/records/12747829) was published in our previous study, and it was trained using publicly available unlabeled pure sequence protein sequences from UniProt. Therefore, we 
+[The pre-trained model](https://zenodo.org/records/12747829) was published in our previous study, and it was trained using publicly available unlabeled pure sequence protein sequences from UniProt. <br>Therefore, the pre-trained model can be directly fine-tuned using the target dataset to construct the desired prediction model.  
 
 
 MP-BERT is trained using publicly available unlabelled pure sequence protein sequences, by self-supervised learning in Figure a.<br>
