@@ -9,7 +9,7 @@ First, you need to organize the training data into the following format:
 
 Each csv file needs to contain the following columns：
 
-| id_0 | seq_0 | label |
+| id | seq | label |
 | :--: 	| :--: | :--:	 |
 | protein id | protein sequence | int label |
 
