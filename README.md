@@ -27,6 +27,7 @@ We have fine-tuned the framework for classification to create three bioactive mo
 
 ## Prediction Task
 If you wish to identify antimicrobial peptides (AMPs) using an existing model, you can directly use one of our fine-tuned models without the need to construct a new prediction model from scratch. <br><br>
+Note: In the prediction results, label "0" represents positive, and label "1" represents negative.
 
 
 
