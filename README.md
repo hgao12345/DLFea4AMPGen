@@ -15,8 +15,6 @@ The overall architecture of the model is shown in the figure below：<br><br>
 <img src="https://github.com/hgao12345/DLFea4AMPGen/blob/main/Images/structure.png" alt="Model Structure" width="600">
 
 
-![./images/structure.png](https://github.com/hgao12345/DLFea4AMPGen/blob/main/Images/structure.png)
-
 [The pre-trained model](https://zenodo.org/records/12747829) was published in our previous study, and it was trained using publicly available unlabeled pure sequence protein sequences from UniProt. <br><br>
 Therefore, we can directly fine-tune this pre-trained model to construct the desired prediction model. 
 <br><br>
