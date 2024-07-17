@@ -7,11 +7,11 @@ First, you need to organize the training data into the following format:
 &emsp;&emsp;|---val.csv (Optional) <br>
 &emsp;&emsp;|---test.csv (Optional) <br>
 
-Each csv file needs to contain the following five columns：
+Each csv file needs to contain the following columns：
 
-| id_0   	| seq_0 |     id_1	 | seq_1   	| label |
-| :--: 	| :--: | :--: | :--: | :--:	 |
-| the first protein id | the first protein sequence | the second protein id | the second protein sequence | int label |
+| id_0 | seq_0 | label |
+| :--: 	| :--: | :--:	 |
+| protein id | protein sequence | int label |
 
 
 After that, you need to organize the data into Record format：
