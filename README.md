@@ -1,5 +1,6 @@
 # DLFea4AMPGen
-
+By fine-tuning the [pre-trained model MP-BERT](https://github.com/BRITian/MP-BERT), three models, ABP-MPB, AFP-MPB, and AOP-MPB, were constructed.
+Based on this, de novo design of multifunctional antimicrobial peptides was carried out.
 
 
 # Install Requirements
