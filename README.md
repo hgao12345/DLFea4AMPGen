@@ -26,9 +26,9 @@ We have fine-tuned the framework for classification to create three bioactive mo
 
 
 ## Prediction Task
-If you wish to identify antimicrobial peptides (AMPs) using an existing model, you can directly use one of our fine-tuned models without the need to construct a new prediction model from scratch. <br><br>
+If you wish to identify antimicrobial peptides (AMPs) using an existing model, you can directly use one of our fine-tuned models without the need to construct a new prediction model from scratch. <br>
 ### Data Preparation
-A total of two columns of data are required. The first column is the ID number, with the column name "id"; the second column is the sequence information, with the column name "seq".
+A total of two columns of data are required in CSV file. The first column is the ID number, with the column name "id"; the second column is the sequence information, with the column name "seq". As shown in the table below：
 | id | seq |
 | :--:| :--: |
 | id1 | seq1 |
