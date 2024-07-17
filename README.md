@@ -7,7 +7,7 @@ Based on this, a de novo design strategy for multifunctional antimicrobial pepti
 [![](https://img.shields.io/badge/Environment-Docker>=18.03-yellow.svg??style=flat-square)](https://www.docker.com/) <br><br>
 The model construction process uses the MindSpore framework. Installation guide for installing Ascend MindSpore on different hardware platforms can be found at: https://www.mindspore.cn/install/.<br><br>
 Here, we recommend to use Docker, an open source application container engine that allows developers to package their applications, as well as dependency packages, into a lightweight, portable container.
-<br><br> By using Docker, rapid deployment of MindSpore can be achieved and isolated from the system environment.<br><br><br>
+<br><br> By using Docker, rapid deployment of MindSpore can be achieved and isolated from the system environment.<br><br>
 
 
 ## Finetune Task
@@ -24,7 +24,7 @@ Therefore, we can directly fine-tune this pre-trained model to construct the des
 | [AFP-MPB](https://zenodo.org/records/12747957/files/AFP_Best_Model.ckpt?download=1) | antifungal activity identification |
 | [AOP-MPB](https://zenodo.org/records/12747957/files/AOP_Best_Model.ckpt?download=1) | antioxidant activity identification |
 
-<br><br><br>
+<br><br>
 ## Prediction Task
 If you only want to identify AMPs using an existing model rather than constructing a new bioactive peptide prediction model from scratch, you can directly use our model for prediction. <br><br>
 
