@@ -1,0 +1,12 @@
+python mpbert_classification.py 
+--config_path config_1024.yaml 
+--load_checkpoint_url AOP_Best_Model.ckpt 
+--do_predict True 
+--description classification 
+--num_class 2 
+--device_id id 
+--vocab_file vocab_v2.txt 
+--data_url to_pred.csv 
+--output_url output_path
+--return_sequence False 
+--return_csv True 1> log.log 2> sys.log
