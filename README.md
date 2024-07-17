@@ -12,7 +12,7 @@ Here, we recommend to use Docker, an open source application container engine th
 
 ## Finetune Task
 The overall architecture of the model is shown in the figure below：<br><br>
-<img src="https://github.com/hgao12345/DLFea4AMPGen/blob/main/Images/structure.png" alt="Model Structure" width="600">
+<img src="https://github.com/hgao12345/DLFea4AMPGen/blob/main/Images/structure.png" alt="Model Structure" width="500">
 
 
 [The pre-trained model](https://zenodo.org/records/12747829) was published in our previous study, and it was trained using publicly available unlabeled pure sequence protein sequences from UniProt. <br><br>
