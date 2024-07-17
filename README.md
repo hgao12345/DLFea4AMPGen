@@ -5,11 +5,13 @@ By fine-tuning the [pre-trained model MP-BERT](https://github.com/BRITian/MP-BER
 ## Installation
 ### Huawei Atlas Server (Linux, with Huawei Ascend 910 NPU)
 [![](https://img.shields.io/badge/Environment-Docker>=18.03-yellow.svg??style=flat-square)](https://www.docker.com/) <br>
-The model construction process uses the MindSpore framework. Installation guide for installing Ascend MindSpore on different hardware platforms can be found at: https://www.mindspore.cn/install/.<br>Here, we recommended to use Docker, an open source application container engine that allows developers to package their applications, as well as dependency packages, into a lightweight, portable container.<br> By using Docker, rapid deployment of MindSpore can be achieved and isolated from the system environment.
+The model construction process uses the MindSpore framework. Installation guide for installing Ascend MindSpore on different hardware platforms can be found at: https://www.mindspore.cn/install/.<br>Here, we recommend to use Docker, an open source application container engine that allows developers to package their applications, as well as dependency packages, into a lightweight, portable container.<br> By using Docker, rapid deployment of MindSpore can be achieved and isolated from the system environment.
 
 
+## Finetune Task
+[The pre-trained model](https://zenodo.org/records/12747829) was published in our previous study, and it was trained using publicly available unlabeled pure sequence protein sequences from UniProt. Therefore, we 
 
-## Structure of MP-BERT and Finetune Task
+
 MP-BERT is trained using publicly available unlabelled pure sequence protein sequences, by self-supervised learning in Figure a.<br>
 We train and provide several different pre-trained models with different MP-BERT Hidden Layer sizes, different training data and different data compositions.
 A fine-tuned framework for classification, regression and sites prediction is currently available, as shown in Figures b and c.
