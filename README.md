@@ -15,7 +15,7 @@ The overall architecture of the model is shown in the figure below：<br><br>
 ![./images/structure.png](https://github.com/hgao12345/DLFea4AMPGen/blob/main/Images/structure.png)
 
 [The pre-trained model](https://zenodo.org/records/12747829) was published in our previous study, and it was trained using publicly available unlabeled pure sequence protein sequences from UniProt. <br><br>
-Therefore, the pre-trained model can be directly fine-tuned using the target dataset to construct the desired prediction model. 
+Therefore, we can directly fine-tune this pre-trained model to construct the desired prediction model. 
 <br><br>Here, the fine-tuned framework for classification was used to construct different bioactive models. <br>
 **Fine-tuned models currently available:**
 | model	| function |
@@ -24,47 +24,9 @@ Therefore, the pre-trained model can be directly fine-tuned using the target dat
 | [AFP-MPB](https://zenodo.org/records/12747957/files/AFP_Best_Model.ckpt?download=1) | antifungal activity identification |
 | [AOP-MPB](https://zenodo.org/records/12747957/files/AOP_Best_Model.ckpt?download=1) | antioxidant activity identification |
 
+<br><br><br>
+## Prediction Task
+If you only want to identify AMPs using an existing model rather than constructing a new bioactive peptide prediction model from scratch, you can directly use our model for prediction. <br><br>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-MP-BERT is trained using publicly available unlabelled pure sequence protein sequences, by self-supervised learning in Figure a.<br>
-We train and provide several different pre-trained models with different MP-BERT Hidden Layer sizes, different training data and different data compositions.
-A fine-tuned framework for classification, regression and sites prediction is currently available, as shown in Figures b and c.
-MP-BERT is based on MindSpore ModelZoo's BERT which has been deeply modified to make it more suitable for protein tasks. Visit the [ModelZoo](https://gitee.com/mindspore/models/tree/master/official/nlp/Bert) page to learn more.
-
-![structure](./images/structure.jpg)
-
-## MP-BERT Pre-training
-As MP-BERT needs to be trained on a large dataset, we recommend using a trained pre-trained model or contacting us.<br>
-In our study, we used 8 * Ascend 910 32GB computing NPUs, 768GB Memory on a Huawei Atlas 800-9000 training server to complete the training.<br>
-The data processing and pre-training code is stored under Pretrain_code and the training data is taken from the UniRef dataset.<br>
-Current results for the pre-training task of sequence pairs using Pfamily to establish links between sequences, predicted using the [ProtENN](https://console.cloud.google.com/storage/browser/brain-genomics-public/research/proteins/pfam/random_split) .<br>
-
-
-
-**See the Pretrain_code section for more information on the use of pre-training**
-
-## MP-BERT Fine-tuning
-Fine tuning can be achieved on one NPU or GPU card
-Please load a pre-trained model to achieve fine-tuning according to your needs
-**See Finetune_code section for details**
-
-## MP-BERT Fine-tuning downstream tasks
-### MPB-PPI
-For new information see: [MPB-PPI and MPB-PPISP](https://github.com/BRITian/MPB-PPI-MPB-PPISP) 
-
-### MPB-PPISP
-For new information see: [MPB-PPI and MPB-PPISP](https://github.com/BRITian/MPB-PPI-MPB-PPISP) 
