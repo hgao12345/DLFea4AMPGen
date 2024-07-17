@@ -16,8 +16,9 @@ The overall architecture of the model is shown in the figure below：<br><br>
 
 [The pre-trained model](https://zenodo.org/records/12747829) was published in our previous study, and it was trained using publicly available unlabeled pure sequence protein sequences from UniProt. <br><br>
 Therefore, we can directly fine-tune this pre-trained model to construct the desired prediction model. 
-<br><br>Here, the fine-tuned framework for classification was used to construct three bioactive models, which were ABP-MPB, AFP-MPB, and AOP-MPB. <br><br>
-**Fine-tuned models currently available:**
+<br><br>
+**Available Fine-tuned models**
+We have fine-tuned the framework for classification to create three bioactive models: ABP-MPB, AFP-MPB, and AOP-MPB. The details are as follows:
 | model	| function |
 | :--: 	| :--: |
 | [ABP-MPB](https://zenodo.org/records/12747957/files/ABP_Best_Model.ckpt?download=1) | antibacterial activity identification |
@@ -26,7 +27,7 @@ Therefore, we can directly fine-tune this pre-trained model to construct the des
 
 
 ## Prediction Task
-If you only want to identify AMPs using an existing model rather than constructing a new bioactive peptide prediction model from scratch, you can directly use our model for prediction. <br><br>
+If you wish to identify antimicrobial peptides (AMPs) using an existing model, you can directly use one of our fine-tuned models without the need to construct a new prediction model from scratch. <br><br>
 
 
 
