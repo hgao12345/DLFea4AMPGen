@@ -2,9 +2,10 @@
 By fine-tuning the [pre-trained model MP-BERT](https://github.com/BRITian/MP-BERT), we constructed ABP-MPB model for identifying antibacterial peptides, AFP-MPB model for identifying antifungal peptides, and AOP-MPB model for identifying antioxidant peptides.<br>Based on this, a de novo design strategy for multifunctional antimicrobial peptides was developed.
 
 
-# Install Requirements
+## Install Requirements
 ## Huawei Atlas Server (Linux, with Huawei Ascend 910 NPU)
 [![](https://img.shields.io/badge/Environment-Docker>=18.03-yellow.svg??style=flat-square)](https://www.docker.com/) 
+
 
 To run MP-BERT at Ascend using the MindSpore framework, it is recommended to use Docker, an open source application container engine that allows developers to package their applications, as well as dependency packages, into a lightweight, portable container.<br> By using Docker, rapid deployment of MindSpore can be achieved and isolated from the system environment.
 
