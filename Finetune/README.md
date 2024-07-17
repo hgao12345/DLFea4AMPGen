@@ -1,4 +1,4 @@
-# Classification
+# Classification Task
 
 First, you need to organize the training data into the following format:
 
