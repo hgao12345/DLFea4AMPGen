@@ -1,5 +1,5 @@
 # DLFea4AMPGen
-By fine-tuning the [pre-trained model MP-BERT](https://github.com/BRITian/MP-BERT), three models, ABP-MPB, AFP-MPB, and AOP-MPB, were constructed.
+By fine-tuning the [pre-trained model MP-BERT](https://github.com/BRITian/MP-BERT), we constructed ABP-MPB model for identifying antibacterial peptides, AFP-MPB model for identifying antifungal peptides, and AOP-MPB model for identifying antioxidant peptides.
 Based on this, de novo design of multifunctional antimicrobial peptides was carried out.
 
 
