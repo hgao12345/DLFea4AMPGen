@@ -8,5 +8,5 @@ In this step, a total of two columns of data are required in CSV file. The first
 | id3 | seq3 |
 
 
-Here, it takes less than 1 minute to predict 100 active peptides. And the ABP folder has been supplemented with examples of input data files and model prediction results. <br><br>
+Here, it takes less than 1 minute to predict 100 active peptides. And [the ABP folder](DLFea4AMPGen/Prediction/ABP/) has been supplemented with examples of input data files and model prediction results. <br><br>
 Note: In the prediction results, label "0" represents positive, and label "1" represents negative.
