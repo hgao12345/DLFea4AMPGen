@@ -59,3 +59,8 @@ Perform multiple sequence alignment using MEGA11, followed by phylogenetic tree 
 ```
 bash fasttree.sh
 ```
+### Systematic shuffle
+Systematically generate all possible combinations of key high-frequency amino acids for each group to obtain a set of candidate sequences:
+```
+python Group_A.py
+```
