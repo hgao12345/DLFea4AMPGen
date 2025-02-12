@@ -41,4 +41,7 @@ Note: In the prediction results, label "0" represents positive, and label "1" re
 ## Sequence Generation
 Once the pre-built model is ready and the environment is properly configured, follow these steps sequentially to generate the sequences from scratch.
 ### SHAP value extraction
-
+Run the following command to extract SHAP values:
+```
+python SHAP_value.py
+```
