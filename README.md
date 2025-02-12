@@ -64,3 +64,8 @@ Systematically generate all possible combinations of key high-frequency amino ac
 ```
 python Group_A.py
 ```
+### Representative sequence
+Systematically generate all possible combinations of key high-frequency amino acids for each group to obtain a set of candidate sequences:
+```
+python Group_A.py
+```
