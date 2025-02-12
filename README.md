@@ -46,8 +46,8 @@ Run the following command to extract SHAP values:
 python SHAP_value.py
 ```
 ### Sliding window
+The sliding window process is illustrated in the figure below：
 <img src="https://github.com/hgao12345/DLFea4AMPGen/blob/main/Images/sliding_windows_Diagram.png" alt="Model Structure" width="500">
-
 
 Normalize the SHAP value extraction results for each model to compute relative values. This step helps mitigate potential biases caused by large differences in the magnitude of results across different models:
 ```
