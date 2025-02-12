@@ -41,7 +41,7 @@ Note: In the prediction results, label "0" represents positive, and label "1" re
 ## Sequence Generation
 Once the pre-built model is ready and the environment is properly configured, follow these steps sequentially to generate the sequences from scratch.
 ### SHAP value extraction
-Run the following command to extract SHAP values. A total of three files are generated: seq.txt, base_value.txt, and SHAP_value.txt. The SHAP_value.txt file contains the SHAP values extracted by the model for each amino acid, with each amino acid assigned a corresponding SHAP value. This file is the primary focus of our analysis.
+Run the following command to extract SHAP values. A total of three files are generated: [seq.txt](https://zenodo.org/records/12747957/files/ABP_Best_Model.ckpt?download=1), [base_value.txt](https://zenodo.org/records/12747957/files/ABP_Best_Model.ckpt?download=1), and [SHAP_value.txt](https://zenodo.org/records/12747957/files/ABP_Best_Model.ckpt?download=1). The SHAP_value.txt file contains the SHAP values extracted by the model for each amino acid, with each amino acid assigned a corresponding SHAP value. This file is the primary focus of our analysis.
 ```
 python SHAP_value.py
 ```
