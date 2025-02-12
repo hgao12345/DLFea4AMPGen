@@ -68,7 +68,11 @@ Systematically generate all possible combinations of key high-frequency amino ac
 python Group_A.py
 ```
 ### Representative sequence
+Use the [iFeature software](https://github.com/Superzchen/iFeature/) to cluster all sequences from each group. After configuring the environment, execute the following code to complete this process:
+```
+python iFeature.py
+```
 Systematically generate all possible combinations of key high-frequency amino acids for each group to obtain a set of candidate sequences:
 ```
-python Group_A.py
+python centroid.py
 ```
