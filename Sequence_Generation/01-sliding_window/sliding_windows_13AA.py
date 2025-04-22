@@ -56,7 +56,7 @@ for line in range(len(filtered_df_len)):
         my_list = [id_n, max_seq_cut, max_shap_cut_str]
         df.loc[len(df)] = my_list
 
-df.to_csv("13AA_motif_dayu_0_right.csv",index=None)
+df.to_csv("13AA_motif_pos_right.csv",index=None)
 
 print("DONE!!!")
 
