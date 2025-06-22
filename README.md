@@ -55,7 +55,7 @@ python shap_value_normalization.py
 ```
 Set a sliding window of 13 amino acids and retain the window with the highest average SHAP value, provided that it is greater than 0, for each sequence：
 ```
-python sliding_windows_13AA.py
+python sliding_windows_13AA.py --SHAP_file <SHAP_value.txt> --seq_file <sequence.csv> --length 13 --output_path <output_path>
 ```
 ### Phylogenetic tree
 Perform multiple sequence alignment using MEGA11, followed by phylogenetic tree construction:
