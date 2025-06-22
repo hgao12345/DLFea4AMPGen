@@ -50,7 +50,7 @@ python SHAP_value.py --model <Finetuned model> --input_file <sequence.csv> --out
 - `--model`: Path to the fine-tuned BERT model checkpoint (e.g., `.ckpt` file).
 - `--input_file`: A CSV file with a column named `seq`, where each row is an amino acid sequence (e.g., `MKTIIALSYIFCLVFAD`).
 - `--output_path`: Directory where output files (`SHAP_value.txt`, `base_value.txt`, `seq.txt`) will be saved.
-
+---
 ### Sliding window
 The sliding window process is illustrated in the figure below：<br><br>
 <img src="https://github.com/hgao12345/DLFea4AMPGen/blob/main/Images/sliding_windows_Diagram.png" alt="Model Structure" width="500">
@@ -69,13 +69,18 @@ python sliding_windows.py --SHAP_file <SHAP_value.txt> --seq_file <sequence.csv>
 - `--seq_file`: The CSV file containing the original sequences (`seq` column required), which should match the SHAP values by order.
 - `--length`: Length of the sliding window to apply (default is 13 amino acids).
 - `--output_path`: Directory where the extracted motifs or windowed sequences will be saved.
-
 ---
 ### Phylogenetic tree
 Build the phylogenetic tree with the following command:
 ```
 bash tree.sh <motif.fasta> <tree.newick>
 ```
+**Parameters:**
+
+- `<motif.fasta>`: Input FASTA file containing the aligned sequences or motifs to be used for tree construction.
+- `<tree.newick>`: Output file name for the generated phylogenetic tree in Newick format.
+
+---
 ### Systematic shuffle
 Systematically generate all possible combinations of key high-frequency amino acids for each group to obtain a set of candidate sequences:
 ```
