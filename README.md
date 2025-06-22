@@ -46,9 +46,9 @@ To **maximize performance for SHAP value extraction**, we recommend a two-enviro
 
 1. **Train and fine-tune your model** on **Huawei Ascend 910 NPU** (Linux) — ideal for high-efficiency model training.
 2. **Extract SHAP values** on a **GPU–enabled server** (or at least a CPU machine), because:
-   - The core `shap` library supports **CPU and CUDA‑accelerated SHAP** (e.g., `GPUTreeExplainer`, `DeepExplainer`)  [oai_citation:0‡shap.readthedocs.io](https://shap.readthedocs.io/en/latest/generated/shap.GPUTreeExplainer.html?utm_source=chatgpt.com) [oai_citation:1‡github.com](https://github.com/sgl-project/sglang/issues/3781?utm_source=chatgpt.com) [oai_citation:2‡shap.readthedocs.io](https://shap.readthedocs.io/en/latest/example_notebooks/api_examples/explainers/GPUTree.html?utm_source=chatgpt.com).
+   - The core `shap` library supports **CPU and CUDA‑accelerated SHAP** (e.g., `GPUTreeExplainer`, `DeepExplainer`)  ([SHAP](https://github.com/shap/shap.git)) .
    - `shap` does **not support Ascend NPUs**—SHAP computations will fall back to CPU if run in Ascend environments.
-   - Using GPU acceleration can **speed up SHAP computation by 10–20× or more** compared to CPU  [oai_citation:3‡github.com](https://github.com/sgl-project/sglang/issues/3781?utm_source=chatgpt.com).
+   - Using GPU acceleration can **speed up SHAP computation by 10–20× or more** compared to CPU.
 
 ### Recommended Setup for SHAP Extraction
 
