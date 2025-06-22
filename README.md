@@ -60,7 +60,7 @@ python sliding_windows_13AA.py --SHAP_file <SHAP_value.txt> --seq_file <sequence
 ### Phylogenetic tree
 Perform multiple sequence alignment using MEGA11, followed by phylogenetic tree construction:
 ```
-bash fasttree.sh
+bash tree.sh <motif.fasta> <tree.newick>
 ```
 ### Systematic shuffle
 Systematically generate all possible combinations of key high-frequency amino acids for each group to obtain a set of candidate sequences:
