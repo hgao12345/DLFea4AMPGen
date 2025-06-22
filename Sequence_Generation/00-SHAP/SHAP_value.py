@@ -6,6 +6,8 @@ from mindspore.train.serialization import load_checkpoint, load_param_into_net
 import shap
 from transformers import BertTokenizer
 import pandas as pd
+import argparse
+from tqdm import tqdm
 
 from src import tokenization as ms_token
 import scipy as sp
@@ -106,49 +108,57 @@ def f(x):
         vals.append(val)
     return np.array(vals)
 
-nnn = [16]
-for fold_ in nnn:
-    model=BertCLS(BertConfig(), False, 2)
-    param_dict = load_checkpoint(f"./best_model/best_model_from_finetune.ckpt")
-    load_param_into_net(model, param_dict)
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument('--model', type=str, required=True, help='model from finetune')
+parser.add_argument('--input_file', type=str, required=True, help='CSV file containing three columns: id, seq, label')
+parser.add_argument('--output_path', type=str, required=True, help='Directory path to save the result file')
 
 
-    tokenizer = BertTokenizer.from_pretrained("./src/vocab_v2.txt", do_lower_case=False)
+args = parser.parse_args()
 
 
-    file_data = pd.read_csv(f"./datasets/data_example.csv")
-    
-
-    out_value = open(f"./output/SHAP_value.txt","a",encoding="utf-8")
-    out_base_value = open(f"./output/base_value.txt","a",encoding="utf-8")
-    out_seq = open(f"./output/seq.txt","a",encoding="utf-8")
-
-    for line in range(len(file_data)):
-        print(line)
-        seq=file_data.iloc[line,1]
-        check_res = check_output(" ".join(list(seq)),seq)
-
-        seq_len = len(seq)
-
-        seq = [" ".join(list(seq)),]
+model=BertCLS(BertConfig(), False, 2)
+param_dict = load_checkpoint(args.model)
+load_param_into_net(model, param_dict)
 
 
-        explainer = shap.Explainer(f, tokenizer)
-        #print(f"explainer:{explainer}")
+tokenizer = BertTokenizer.from_pretrained("./src/vocab_v2.txt", do_lower_case=False)
 
 
-        shap_values = explainer(seq, fixed_context=1)
-        #print(f"shap_value:{shap_values.values[0]}")
-        val_ = list(shap_values.values[0])
-        print(val_)
-        #seq_ = list(shap_values.data[0])
-        seq_ = list(shap_values.data[0])
+# Load data
+file_data = pd.read_csv("./datasets/data_example.csv")
+
+# Create SHAP Explainer
+explainer = shap.Explainer(f, tokenizer)
+
+# Use 'with' to manage file writing and automatically close files
+with open(f"{args.output_path}/SHAP_value.txt", "w", encoding="utf-8") as out_value, \
+     open(f"{args.output_path}/base_value.txt", "w", encoding="utf-8") as out_base_value, \
+     open(f"{args.output_path}/seq.txt", "w", encoding="utf-8") as out_seq:
+
+    # Iterate over each row, use tqdm to show progress bar
+    for idx, row in tqdm(file_data.iterrows(), total=len(file_data), desc="Processing sequences"):
+        seq_raw = row["seq"]
+
+        # Optional: check model prediction
+        check_output(" ".join(list(seq_raw)), seq_raw)
+
+        # Prepare input for SHAP analysis
+        seq_formatted = [" ".join(list(seq_raw))]
+
+        # Calculate SHAP values
+        shap_values = explainer(seq_formatted, fixed_context=1)
+
+        # Extract values
+        val_ = shap_values.values[0]
         base_val_ = shap_values.base_values[0]
-        out_value.write(f"{val_}\n")
-        out_base_value.write(f"{base_val_}\n")
-        out_seq.write(f"{seq_}\n")
+        seq_ = shap_values.data[0]
 
-out_seq.close()
-out_value.close()
-out_base_value.close()
-print("DONE!!!")
+        # Write results
+        out_value.write(",".join(map(str, val_)) + "\n")
+        out_base_value.write(str(base_val_) + "\n")
+        out_seq.write(",".join(seq_) + "\n")
+
+print("All done.")
