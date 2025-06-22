@@ -58,7 +58,7 @@ Set a sliding window of 13 amino acids and retain the window with the highest av
 python sliding_windows.py --SHAP_file <SHAP_value.txt> --seq_file <sequence.csv> --length 13 --output_path <output_path>
 ```
 ### Phylogenetic tree
-Perform multiple sequence alignment using MEGA11, followed by phylogenetic tree construction:
+Build the phylogenetic tree with the following command:
 ```
 bash tree.sh <motif.fasta> <tree.newick>
 ```
