@@ -74,5 +74,5 @@ python iFeature.py <shuffle.fasta>
 ```
 Systematically generate all possible combinations of key high-frequency amino acids for each group to obtain a set of candidate sequences:
 ```
-python centroid.py
+python centroid.py --input_file <example_data.csv> --output_path <output_path> --random_seed 0 --n_clusters <n_clusters>
 ```
