@@ -45,6 +45,12 @@ Run the following command to extract SHAP values. A total of three files are gen
 ```
 python SHAP_value.py --model <Finetuned model> --input_file <sequence.csv> --output_path <output_path>
 ```
+**Parameters:**
+
+- `--model`: Path to the fine-tuned BERT model checkpoint (e.g., `.pt` or `.ckpt` file).
+- `--input_file`: A CSV file with a column named `seq`, where each row is an amino acid sequence (e.g., `MKTIIALSYIFCLVFAD`).
+- `--output_path`: Directory where output files (`SHAP_value.txt`, `base_value.txt`, `seq.txt`) will be saved.
+
 ### Sliding window
 The sliding window process is illustrated in the figure below：<br><br>
 <img src="https://github.com/hgao12345/DLFea4AMPGen/blob/main/Images/sliding_windows_Diagram.png" alt="Model Structure" width="500">
