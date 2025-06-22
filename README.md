@@ -43,7 +43,7 @@ Once the pre-built model is ready and the environment is properly configured, fo
 ### SHAP value extraction
 Run the following command to extract SHAP values. A total of three files are generated: [seq.txt](https://github.com/hgao12345/DLFea4AMPGen/blob/main/Sequence_Generation/00-SHAP/output/seq.txt), [base_value.txt](https://github.com/hgao12345/DLFea4AMPGen/blob/main/Sequence_Generation/00-SHAP/output/base_value.txt), and [SHAP_value.txt](https://github.com/hgao12345/DLFea4AMPGen/blob/main/Sequence_Generation/00-SHAP/output/SHAP_value.txt). The SHAP_value.txt file contains the SHAP values extracted by the model for each amino acid, with each amino acid assigned a corresponding SHAP value. This file is the primary focus of our analysis.
 ```
-python SHAP_value.py
+python SHAP_value.py --model <Finetuned model> --input_file <sequence.csv> --output_path <output_path>
 ```
 ### Sliding window
 The sliding window process is illustrated in the figure below：<br><br>
