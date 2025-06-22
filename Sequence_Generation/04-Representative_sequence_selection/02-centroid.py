@@ -8,7 +8,7 @@ import os
 parser = argparse.ArgumentParser(description="Perform KMeans clustering on example data.")
 parser.add_argument('--input_file', type=str, required=True, help='Input CSV file (e.g., example_data.csv)')
 parser.add_argument('--output_path', type=str, required=True, help='Directory to save output files')
-parser.add_argument('--random_seed', type=int, default=0, help='Random seed for KMeans (default: 0)')
+parser.add_argument('--random_seed', type=int, default=1, help='Random seed for KMeans (default: 1)')
 parser.add_argument('--n_clusters', type=int, default=4, help='Number of clusters (default: 4)')
 args = parser.parse_args()
 
