@@ -48,7 +48,7 @@ python SHAP_value.py --model <Finetuned model> --input_file <sequence.csv> --out
 **Parameters:**
 
 - `--model`: Path to the fine-tuned BERT model checkpoint (e.g., `.ckpt` file).
-- `--input_file`: A CSV file with a column named `seq`, where each row is an amino acid sequence (e.g., `MKTIIALSYIFCLVFAD`).
+- `--input_file`: A CSV file with a column named `seq`, where each row is an amino acid sequence.
 - `--output_path`: Directory where output files (`SHAP_value.txt`, `base_value.txt`, `seq.txt`) will be saved.
 ---
 ### Sliding window
