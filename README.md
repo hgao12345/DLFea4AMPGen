@@ -63,6 +63,14 @@ Set a sliding window of 13 amino acids and retain the window with the highest av
 ```
 python sliding_windows.py --SHAP_file <SHAP_value.txt> --seq_file <sequence.csv> --length 13 --output_path <output_path>
 ```
+**Parameters:**
+
+- `--SHAP_file`: Path to the file containing SHAP values (e.g., `SHAP_value.txt`) where each row corresponds to one sequence, and each value corresponds to one amino acid.
+- `--seq_file`: The CSV file containing the original sequences (`seq` column required), which should match the SHAP values by order.
+- `--length`: Length of the sliding window to apply (default is 13 amino acids).
+- `--output_path`: Directory where the extracted motifs or windowed sequences will be saved.
+
+---
 ### Phylogenetic tree
 Build the phylogenetic tree with the following command:
 ```
