@@ -28,10 +28,10 @@ def name_seq(fasta_file):
     return name_list, seq_list
 
 
-# in_para = sys.argv[1:]
-in_para = ["example.fasta"]  # sys.argv[1:]
 
-name_list, seq_list = name_seq(in_para[0])
+in_para = sys.argv[1:]
+
+nname_list, seq_list = name_seq(in_para[0])
 seq_elements = list(Counter(''.join(seq_list)))
 
 
