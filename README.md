@@ -65,12 +65,12 @@ bash tree.sh <motif.fasta> <tree.newick>
 ### Systematic shuffle
 Systematically generate all possible combinations of key high-frequency amino acids for each group to obtain a set of candidate sequences:
 ```
-python Group_A.py
+python systematic_shuffle.py --input_file <amino_acids.csv> --length <motif_length> --output_path <output_path>
 ```
 ### Representative sequence
 Use the [iFeature software](https://github.com/Superzchen/iFeature/) to cluster all sequences from each group. After configuring the environment, execute the following code to complete this process:
 ```
-python iFeature.py
+python iFeature.py <shuffle.fasta>
 ```
 Systematically generate all possible combinations of key high-frequency amino acids for each group to obtain a set of candidate sequences:
 ```
