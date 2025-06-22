@@ -77,7 +77,7 @@ bash tree.sh <motif.fasta> <tree.newick>
 ```
 **Parameters:**
 
-- `<motif.fasta>`: Input FASTA file containing the aligned sequences or motifs to be used for tree construction.
+- `<motif.fasta>`: Input FASTA file containing sequences to be used for tree construction.
 - `<tree.newick>`: Output file name for the generated phylogenetic tree in Newick format.
 
 ---
@@ -86,6 +86,12 @@ Systematically generate all possible combinations of key high-frequency amino ac
 ```
 python systematic_shuffle.py --input_file <amino_acids.csv> --length <motif_length> --output_path <output_path>
 ```
+**Parameters:**
+
+- `--input_file <amino_acids.csv>`: CSV file listing key amino acids for each position to be shuffled and combined.
+- `--length <motif_length>`: The length of the motif or peptide to be generated.
+- `--output_path <output_path>`: Directory where the generated candidate sequences in FASTA format will be saved.
+---
 ### Representative sequence
 Use the [iFeature software](https://github.com/Superzchen/iFeature/) to cluster all sequences from each group. After configuring the environment, execute the following code to complete this process:
 ```
@@ -95,3 +101,10 @@ Systematically generate all possible combinations of key high-frequency amino ac
 ```
 python centroid.py --input_file <example_data.csv> --output_path <output_path> --random_seed 0 --n_clusters <n_clusters>
 ```
+**Parameters:**
+
+- `--input_file <example_data.csv>`: CSV file containing features or sequences to be clustered.
+- `--output_path <output_path>`: Directory to save clustering results.
+- `--random_seed 0`: (Optional) Random seed for reproducibility.
+- `--n_clusters <n_clusters>`: Number of clusters to generate based on the features extracted by `iFeature.py`.
+---
