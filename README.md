@@ -40,7 +40,7 @@ Note: In the prediction results, label "0" represents positive, and label "1" re
 
 ## Sequence Generation
 Once the pre-built model is ready and the environment is properly configured, follow these steps sequentially to generate the sequences from scratch.
-## Important Environment Recommendation
+### Important Environment Recommendation
 
 To **maximize performance for SHAP value extraction**, we recommend a two-environment setup:
 
