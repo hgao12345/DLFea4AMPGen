@@ -45,7 +45,7 @@ Once the pre-built model is ready and the environment is properly configured, [f
 To **maximize performance for both model training and SHAP value extraction**, we recommend a two-environment setup:
 
 1. **Train and fine-tune your model** inside a Docker environment with Ascend NPU support — ideal for efficient model training.
-2. **Sequence Generation** outside the Docker container in a separate environment - starting from [SHAP value Extracting](https://github.com/shap/shap.git).
+2. **Sequence Generation** in a separate environment outside the Docker container — starting from [SHAP value Extraction](https://github.com/shap/shap.git) — using either GPU or CPU resources (not NPU-based).
 
 ### SHAP value extraction
 Run the following command to extract SHAP values. A total of three files are generated: [seq.txt](https://github.com/hgao12345/DLFea4AMPGen/blob/main/Sequence_Generation/00-SHAP/output/seq.txt), [base_value.txt](https://github.com/hgao12345/DLFea4AMPGen/blob/main/Sequence_Generation/00-SHAP/output/base_value.txt), and [SHAP_value.txt](https://github.com/hgao12345/DLFea4AMPGen/blob/main/Sequence_Generation/00-SHAP/output/SHAP_value.txt). The SHAP_value.txt file contains the SHAP values extracted by the model for each amino acid, with each amino acid assigned a corresponding SHAP value. This file is the primary focus of our analysis.
