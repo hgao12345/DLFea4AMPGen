@@ -1,41 +1,63 @@
+import argparse
 import os
-import pandas as pd
-import sys
 
-f16 = open("ABP_shap_value_3model_inner.txt","r",encoding="utf-8")
-f17 = open("AFP_shap_value_3model_inner.txt","r",encoding="utf-8")
-f20 = open("AOP_shap_value_3model_inner.txt","r",encoding="utf-8")
+# ---- Argument parsing ----
+parser = argparse.ArgumentParser(description="Normalize and merge SHAP value files (global min-max).")
+parser.add_argument('--input_files', nargs='+', required=True, help='List of SHAP input text files')
+parser.add_argument('--output_dir', type=str, required=True, help='Directory to save normalized and merged outputs')
+args = parser.parse_args()
 
-normalized_list16_right = open("normalized_ABP.txt","a",encoding="utf-8")
-normalized_list17_right = open("normalized_AFP.txt","a",encoding="utf-8")
-normalized_list20_right = open("normalized_AOP.txt","a",encoding="utf-8")
-all_3model_mean_right = open("all_3model_mean.txt","a",encoding="utf-8")
+input_files = args.input_files
+output_dir = args.output_dir
+os.makedirs(output_dir, exist_ok=True)
+base_names = [os.path.splitext(os.path.basename(f))[0] for f in input_files]
 
-for i,ii,iii in zip(f16.readlines(),f17.readlines(),f20.readlines()):
-    line16_ = i.strip().split(", ")
-    line17_ = ii.strip().split(", ")
-    line20_ = iii.strip().split(", ")
-    line16 = [-float(item) for item in line16_]
-    line17 = [-float(item) for item in line17_]
-    line20 = [-float(item) for item in line20_]
-    # Standardize each element in the list
-    normalized_list16_values = [(x-0)/(18.428-0) if x > 0 else x / (9.521) for x in line16]
-    normalized_list17_values = [(x-0)/(19.021-0) if x > 0 else x / (9.639) for x in line17]
-    normalized_list20_values = [(x-0)/(15.071-0) if x > 0 else x / (7.846) for x in line20]
-    added_list = [x + y + z for x, y, z in zip(normalized_list16_values, normalized_list17_values, normalized_list20_values)]
 
-    # Convert the list to a string
-    normalized_list16_str = ', '.join(map(str, normalized_list16_values))
-    normalized_list17_str = ', '.join(map(str, normalized_list17_values))
-    normalized_list20_str = ', '.join(map(str, normalized_list20_values))
-    all_3model_mean_str = ', '.join(map(str, added_list))
+# ---- Step 1: Read all data ----
+def read_all_data(file_list):
+    all_data = []
+    for f in file_list:
+        with open(f, 'r', encoding='utf-8') as fh:
+            lines = fh.readlines()
+            data = [[-float(x) for x in line.strip().split(", ")] for line in lines]
+            all_data.append(data)
+    return all_data
 
-    
-    with open("normalized_ABP.txt", "a") as file_normalized_list16:
-        file_normalized_list16.write(f"{normalized_list16_str}\n")
-    with open("normalized_AFP", "a") as file_normalized_list17:
-        file_normalized_list17.write(f"{normalized_list17_str}\n")
-    with open("normalized_AOP.txt", "a") as file_normalized_list20:
-        file_normalized_list20.write(f"{normalized_list20_str}\n")
-    with open("all_3model_mean_right.txt", "a") as file_all_3model_mean:
-        file_all_3model_mean.write(f"{all_3model_mean_str}\n")
+
+all_data = read_all_data(input_files)  # List of N files × List of rows × List of values
+
+# ---- Step 2: Compute global max positive and max negative values ----
+flat_values = [x for file_data in all_data for row in file_data for x in row]
+max_pos = max((x for x in flat_values if x > 0), default=1.0)
+max_neg = max((-x for x in flat_values if x < 0), default=1.0)
+
+
+# ---- Step 3: Global normalization ----
+def normalize_value(x):
+    if x > 0:
+        return x / max_pos
+    elif x < 0:
+        return x / max_neg
+    else:
+        return 0.0
+
+
+normalized_all = [
+    [[normalize_value(x) for x in row] for row in file_data]
+    for file_data in all_data
+]
+
+
+# ---- Step 4: Write normalized results for each file ----
+for name, norm_data in zip(base_names, normalized_all):
+    out_path = os.path.join(output_dir, f"normalized_{name}.txt")
+    with open(out_path, "w", encoding="utf-8") as fw:
+        for row in norm_data:
+            fw.write(', '.join(map(str, row)) + '\n')
+
+
+# ---- Step 5: Compute and write merged (summed) results ----
+with open(os.path.join(output_dir, "all_model_mean.txt"), "w", encoding="utf-8") as fw:
+    for rows in zip(*normalized_all):  # Each round 'rows' is one row from each file
+        added = [sum(vals) for vals in zip(*rows)]
+        fw.write(', '.join(map(str, added)) + '\n')
