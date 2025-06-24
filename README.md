@@ -39,7 +39,7 @@ A total of two columns of data are required in CSV file. The first column is the
 Note: In the prediction results, label "0" represents positive, and label "1" represents negative.
 
 ## Sequence Generation
-Once the pre-built model is ready and the environment is properly configured, follow these steps sequentially to generate the sequences from scratch.
+Once the pre-built model is ready and the environment is properly configured, [follow these steps sequentially to generate the sequences from scratch](https://github.com/hgao12345/DLFea4AMPGen/tree/main/Sequence_Generation).
 ### Important Environment Recommendation
 
 To **maximize performance for both model training and SHAP value extraction**, we recommend a two-environment setup:
