@@ -1,0 +1,4 @@
+Cluster 0 - Closest sequence ID: seq1161250, Sequence: RKPRRWRWWPKRP
+Cluster 1 - Closest sequence ID: seq467012, Sequence: IRPWRKPRWPWKR
+Cluster 2 - Closest sequence ID: seq1407433, Sequence: RLRWPRPRWRKPP
+Cluster 3 - Closest sequence ID: seq622386, Sequence: KKPRPWPWKRRKK
