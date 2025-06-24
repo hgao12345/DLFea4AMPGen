@@ -42,7 +42,7 @@ Note: In the prediction results, label "0" represents positive, and label "1" re
 Once the pre-built model is ready and the environment is properly configured, follow these steps sequentially to generate the sequences from scratch.
 ### Important Environment Recommendation
 
-To **maximize performance for SHAP value extraction**, we recommend a two-environment setup:
+To **maximize performance for both model training and SHAP value extraction**, we recommend a two-environment setup:
 
 1. **Train and fine-tune your model** inside a Docker environment with Ascend NPU support — ideal for efficient model training.
 2. **Sequence Generation** outside the Docker container in a separate environment - starting from [SHAP value Extracting](https://github.com/shap/shap.git).
