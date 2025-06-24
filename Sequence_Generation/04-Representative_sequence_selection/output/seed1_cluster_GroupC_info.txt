@@ -1,0 +1,4 @@
+Cluster 0 - Closest sequence ID: seq921945, Sequence: GLCGKGGKCCCGC
+Cluster 1 - Closest sequence ID: seq1047570, Sequence: GLKKCGKKKLKKC
+Cluster 2 - Closest sequence ID: seq410567, Sequence: CLCKKGKCGLCGK
+Cluster 3 - Closest sequence ID: seq386359, Sequence: CLCGGKGKKLGKG
