@@ -112,12 +112,12 @@ python iFeature.py <shuffle.fasta>
 ```
 Systematically generate all possible combinations of key high-frequency amino acids for each group to obtain a set of candidate sequences:
 ```
-python centroid.py --input_file <example_data.csv> --output_path <output_path> --random_seed 0 --n_clusters <n_clusters>
+python centroid.py --input_file <example_data.csv> --output_path <output_path> --random_seed 1 --n_clusters <n_clusters>
 ```
 **Parameters:**
 
 - `--input_file <example_data.csv>`: CSV file containing features or sequences to be clustered.
 - `--output_path <output_path>`: Directory to save clustering results.
-- `--random_seed 0`: (Optional) Random seed for reproducibility.
+- `--random_seed 1`: (Optional) Random seed for reproducibility.
 - `--n_clusters <n_clusters>`: Number of clusters to generate based on the features extracted by `iFeature.py`.
 ---
