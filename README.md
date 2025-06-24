@@ -74,7 +74,7 @@ python shap_value_normalization.py --input_files <file1.txt> <file2.txt> <file3.
 
 Set a sliding window of 13 amino acids and retain the window with the highest average SHAP value, provided that it is greater than 0, for each sequence：
 ```
-python sliding_windows.py --SHAP_file <SHAP_value.txt> --seq_file <sequence.csv> --length 13 --output_path <output_path>
+python sliding_windows.py --SHAP_file <SHAP_value.txt> --seq_file <sequence.csv> --length <length> --output_path <output_path>
 ```
 **Parameters:**
 
