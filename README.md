@@ -68,7 +68,7 @@ python shap_value_normalization.py --input_files <file1.txt> <file2.txt> <file3.
 ```
 **Parameters:**
 
-- `--input_files`: A list of one or more text files containing SHAP values; each file should contain one SHAP value list per line, corresponding to one sequence.
+- `--input_files`: A list of one or more text files containing SHAP values. Each line in a file should represent the SHAP values for a single sequence, with one SHAP value per amino acid.
 - `--output_path`: Directory where the results will be saved.
 <br><br>
 
