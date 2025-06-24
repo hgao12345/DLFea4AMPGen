@@ -62,7 +62,7 @@ python SHAP_value.py --model <Finetuned model> --input_file <sequence.csv> --out
 The sliding window process is illustrated in the figure below：<br><br>
 <img src="https://github.com/hgao12345/DLFea4AMPGen/blob/main/Images/sliding_windows_Diagram.png" alt="Model Structure" width="500">
 
-**If you are generating single-activity peptides, you can skip this normalization step**: Normalize SHAP values across multiple models to mitigate differences in magnitude, enabling fair comparison or integration. This is particularly useful for multi-model ensemble workflows:
+**If you are generating single-activity peptides, you can skip this normalization step**. Normalize SHAP values across multiple models to mitigate differences in magnitude, enabling fair comparison or integration. This is particularly useful for multi-model ensemble workflows:
 ```
 python shap_value_normalization.py --input_files <file1.txt> <file2.txt> <file3.txt> --output_path <output_path>
 ```
